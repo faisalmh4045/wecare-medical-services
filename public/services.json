@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/LNdZLQF/service-1.jpg",
+        "name": "Electrophysiology Services",
+        "description": "Electrophysiology offers cutting-edge treatments for arrhythmias and other potentially serious disorders affecting the heart’s rhythm."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/wym9Bkp/service-2.jpg",
+        "name": "Cardiac Surgery",
+        "description": "Cardiothoracic surgery is the field of medicine involved in surgical treatment of organs inside the thoracic cavity."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/ZNQvvP1/service-3.jpg",
+        "name": "Congestive Heart Failure",
+        "description": "Congestive heart failure (CHF) is a chronic progressive condition that affects the pumping power of your heart muscle."
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/nMNc8MT/3-D-Rendering-Schmerz-im-Brustkorb-Herzanfall-Medizinische-Illustration.jpg",
+        "name": "Renal Artery Intervention",
+        "description": "Renal artery stenting is a procedure to open the renal arteries – the large blood vessels that carry blood to the kidneys"
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/7v3MJjK/service-5.jpg",
+        "name": "Metabolic Stress Testing",
+        "description": "It involves exercising on a treadmill while you are closely monitored and breathing through a mouthpiece and/or face mask."
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/QJ7vSxS/service-4.jpg",
+        "name": "Interventional Cardiology",
+        "description": "It is the subspecialty of cardiology that deals specifically with the catheter- based treatment of heart diseases."
+    }
+]
