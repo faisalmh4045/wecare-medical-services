@@ -49,6 +49,9 @@ const Registration = () => {
                 setUserName(name);
                 setUserDisplayName(name);
                 setError('');
+                if(user.email){
+                    history.push(redirect_url);
+                }
                 setUser(user);
             })
             .catch(error => {

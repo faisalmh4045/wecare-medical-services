@@ -50,8 +50,8 @@ const useFirebase = () => {
     }, [auth]);
 
     const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
+        return signInWithEmailAndPassword(auth, email, password)
+            /* .then(result => {
                 const user = result.user;
                 console.log(user);
                 setError('');
@@ -59,7 +59,7 @@ const useFirebase = () => {
             })
             .catch(error => {
                 setError(error.message);
-            })
+            }) */
     }
     
     const createNewAccount = (email, password) => {

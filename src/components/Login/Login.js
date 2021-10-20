@@ -38,7 +38,20 @@ const Login = () => {
             setError('type a 6 char long password');
             return;
         }
-        processLogin(email, password);
+        processLogin(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                if (user.email) {
+                    history.push(redirect_url);
+                }
+                setError('');
+                setUser(user);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+        
     }
     return (
         <div className='d-flex justify-content-center mt-5'>
