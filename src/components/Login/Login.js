@@ -14,7 +14,7 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
-    const { signInUsingGoogle, processLogin, setUser, error ,setError } = useAuth();
+    const { setIsLoading, signInUsingGoogle, processLogin, setUser, error ,setError } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/';
@@ -29,6 +29,7 @@ const Login = () => {
                 console.log(error.message);
                 setError(error.message);
             })
+            .finally(() => setIsLoading(false));
     }
 
     const handleRegistration = (event) => {

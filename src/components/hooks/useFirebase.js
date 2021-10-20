@@ -8,11 +8,13 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [userDisplayName, setUserDisplayName] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
     const signInUsingGoogle = () => {
+        setIsLoading(true);
         return signInWithPopup(auth, googleProvider);
         /* signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -26,6 +28,7 @@ const useFirebase = () => {
     }
 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth).then(() => {
             // Sign-out successful.
             setUser({});
@@ -33,7 +36,8 @@ const useFirebase = () => {
         }).catch((error) => {
             // An error happened.
             setError(error.message);
-        });
+        })
+        .finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
@@ -41,6 +45,7 @@ const useFirebase = () => {
             if(user) {
                 setUser(user);
             }
+            setIsLoading(false);
         });
     }, [auth]);
 
@@ -85,6 +90,8 @@ const useFirebase = () => {
         setUserDisplayName,
         user,
         error,
+        isLoading,
+        setIsLoading,
         setUserName,
         setUser,
         setError,
